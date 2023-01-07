@@ -3,17 +3,21 @@ import '../styles/App.css';
 const App = () => {
 //code here 
   
+const [buttonState, setButtonState] = useState(true);
 
+  const handleClick = () => {
+    setButtonState(!buttonState)
+  }
   
   return (
     <div className="App">
       <button id="btn1" onClick={handleClick}>
-      {/* assign value for button 1 */}
+      {buttonState?"OFF":"ON"}
       </button>
       <br />
       <br />
       <button id="btn2" onClick={handleClick}>
-        {/* assign value for button 2 */}
+        {buttonState?"ON":"OFF"}
       </button>
     </div>
   );
